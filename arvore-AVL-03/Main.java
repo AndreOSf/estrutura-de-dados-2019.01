@@ -5,28 +5,37 @@ class Main {
       arvore.insert("andre", i);
       arvore.display();
     }*/
-
-    arvore.insert("andre", 50);
+    /*arvore.remove(20);
+    arvore.display();*/
+    
+    arvore.insert("andre", 10);
     arvore.display();
     arvore.insert("andre", 20);
     arvore.display();
-    arvore.insert("andre", 80);
+    arvore.insert("andre", 30);
     arvore.display();
-    arvore.insert("andre", 70);
+    arvore.insert("andre", 40);
     arvore.display();
-    arvore.insert("andre2", 90);
+    arvore.insert("andre2", 50);
     arvore.display();
     arvore.insert("andre", 60);
     arvore.display();
+    arvore.insert("andre", 70);
+    arvore.display();
+    arvore.insert("andre", 80);
+    arvore.display();
 
+    arvore.remove(20);
+    arvore.display();
+     arvore.remove(40);
+    arvore.display();
     arvore.remove(50);
     arvore.display();
     arvore.remove(80);
     arvore.display();
-    arvore.remove(70);
-    arvore.display();
     arvore.remove(60);
     arvore.display();
+
 
     //System.out.println(arvore.searchByKey(90).getObjeto());
 

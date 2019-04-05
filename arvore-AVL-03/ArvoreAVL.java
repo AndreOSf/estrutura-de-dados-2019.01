@@ -232,20 +232,40 @@ public void remove(int key){
     if(novo.getDireito() != null){
       if(novo.getKey() < novo.getPai().getKey()){
         novo.getPai().setEsquerdo(novo.getDireito());
+        aux = attFB(novo.getPai(), -1, 1);
+        if(aux != null){
+        balance(aux);
+        }
       }else{
         novo.getPai().setDireito(novo.getDireito());
+        aux = attFB(novo.getPai(), -1, -1);
+        if(aux != null){
+        balance(aux);
+        }
       }
       novo.getDireito().setPai(novo.getPai());
     }else{
       if(novo.getKey() < novo.getPai().getKey()){
         novo.getPai().setEsquerdo(null);
+        aux = attFB(novo.getPai(), -1, 1);
+        if(aux != null){
+        balance(aux);
+        }
       }else{
         novo.getPai().setDireito(null);
+        aux = attFB(novo.getPai(), -1, -1);
+        if(aux != null){
+        balance(aux);
+        }
       }
       novo = null;
     }
     
-    aux = attFB(no, -1, -1);
+    raiz.setFB(0);
+    /*aux = attFB(no, -1, -1);
+    if(aux != null){
+        balance(aux);
+    }*/
       
   }
   else if(no.getDireito() == null && no.getEsquerdo() == null){
